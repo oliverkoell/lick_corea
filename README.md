@@ -9,7 +9,7 @@ LickCorea is a domain-specific programming language designed for generating jazz
 - Built with Python and utilizes multiple essential libraries.
 
 ## Installation
-```sh
+
 # Clone the repository
 git clone git@github.com:oliverkoell/lick_corea.git
 
