@@ -1,0 +1,18 @@
+# Blue Boassa - Joe Henderson
+
+# Theme:
+aeolian(rhythm="...:", duration=4, notes=[-5], volume=[100])
+aeolian(rhythm=":__:::_:______:_", duration=8, notes=[5,4,3,2,1,-7], volume=[100,100,100,100,100,100])
+aeolian(rhythm=":___:__:__......", duration=8, notes=[-3, 2, 1], volume=[100,100,100])
+locrian(rhythm=":__:::_:______:_", duration=8, notes=[3,2,1,-7,-6,-5], volume=[100,100,100,100,100,100])
+aeolian(rhythm=":___:__:__......", duration=8, notes=[-5,4,3], volume=[100,100,100])
+dorian(rhythm=":__:::_:______:_", duration=8, notes=[1,-7,-6,-5,-4,-3], volume=[100,100,100,100,100,100])
+ionian(rhythm=":_::__::________", duration=8, notes=[-4,-3,-6,-3,-5], volume=[100,100,100,100,100])
+locrian(rhythm=":_::__..:_::___::_____________..", duration=16, notes=[-5,-4,-6,-5,-4,-6,-5,-4], volume=[100,100,100,100,100,100,100,100])
+
+# Improv:
+shredMode(style = "swing", duration = 8);
+shredMode(style = "swing", duration = 7);
+pause(1)
+shredMode(style = "swing", duration = 8);
+ 

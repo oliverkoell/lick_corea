@@ -1,0 +1,78 @@
+# Back to Earth - Dave Brubeck 
+
+#1 means c must be played, 0 means f must be played
+changes = [1,0,0,1,0,1];
+lick = 0;
+current_bar = 1;
+bar_to_trans = [3, 7];
+
+
+#counts amount of times lick has to be played, not amount of bars
+while (lick < 6)
+{ 
+    #lick needs to stay in Cm
+    # Transpose from G to C
+    if (current_bar == 11)
+    {
+        transposeHarmony(5);
+        minorBlues(rhythm = ".:::::::::::", duration = 4, notes = [5va,4va,  3va,2va,1va,  5,4,3,  2,1,2], volume = [100,60,  90,60,60,  90,60,60,  90,60,60]);
+        transposeHarmony(-5);
+        current_bar += 1;    
+    }
+    #transpose from F to C 
+    elif (current_bar in bar_to_trans)
+    {
+        transposeHarmony(-5);
+        minorBlues(rhythm = ".:::::::::::", duration = 4, notes = [5va,4va,  3va,2va,1va,  5,4,3,  2,1,2], volume = [100,60,  90,60,60,  90,60,60,  90,60,60]);
+        transposeHarmony(5);
+        current_bar += 1;
+    }
+    else
+    {
+        minorBlues(rhythm = ".:::::::::::", duration = 4, notes = [5va,4va,  3va,2va,1va,  5,4,3,  2,1,2], volume = [100,60,  90,60,60,  90,60,60,  90,60,60]);
+        current_bar += 1;
+    }
+
+    #check which note should be played at the end of each lick  
+    if (changes[lick] == 1) 
+    {
+        minorBlues(rhythm = ":...............", duration = 4, notes = [1], volume = [100]);
+        current_bar += 1;
+    }
+
+    elif (changes[lick] == 0 and current_bar == 4)
+    {
+        minorBlues(rhythm = ":...............", duration = 4, notes = [3], volume = [100]);
+        current_bar += 1;
+    }
+
+    elif (changes[lick] == 0)
+    {
+        minorBlues(rhythm = ":...............", duration = 4, notes = [1], volume = [100]);
+        current_bar += 1;
+    }
+    lick = lick + 1;
+}
+#bridge to 1st Improvisation
+altered(rhythm = ".::::::::", duration = 3, notes = [1,2,3,4,5.5,7,7,1va], volume = [100,80,70,60,50,50,50,50])
+altered(rhythm = ":__:_...:_:_", duration = 1, notes = [2va,3va,3va,2va], volume = [50,70,50,50])
+aeolian(rhythm = ":", duration = 4, notes = [1va], volume = [70])
+
+#    #start improvisation in Cm on bar 15
+#
+randomDorian(rhythm = "........:::::_:_", duration = 4, volume = [100,100,100, 100,100,100],jump_prop = 0.8, up_down_prop = 0.6);
+randomDorian(rhythm = "..:::___________________", duration = 4, volume = [100,100,100],jump_prop = 0.8, up_down_prop = 0.6);
+#    # C7 
+randomMixolydian(rhythm = "..:::::_::_:", duration = 4, volume = [100,  100,100,100,  100,100,100,100],jump_prop = 0.8, up_down_prop = 0.6);
+#
+#    #2 bars Fm 
+randomDorian(rhythm = ":_:_________:__::__::___:__::_:_", duration = 8, volume = [80,100,80,80, 80,80,100,  80,80,80,100],jump_prop = 0.8, up_down_prop = 0.6);
+#    #music it the time between notes
+pause(4);
+#
+#    #C7 and Dm7 both with Cm Melodic
+randomMelodicMinor(rhythm = ":_:_:_:_:_:_:_____:__:____:_:_:__:__......", duration = 8, volume = [80,80,80,  80,80,80,  80,80,100,    80,80,  80,100],jump_prop = 0.8, up_down_prop = 0.6)
+#
+#    #5-1 back to C
+randomMixolydian(rhythm = "..:::::_::_:", duration = 4, volume = [100,  100,100,100,  100,100,100,100],jump_prop = 0.8, up_down_prop = 0.6);
+ionian(rhythm = ":", duration = 4, notes = [1] ,volume = [100]);
