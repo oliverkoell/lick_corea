@@ -23,7 +23,7 @@ if cmd_line_arg_01 == "readLick":
 
     print("\nYour lick has been successfully added to the database!\n")
 
-if cmd_line_arg_01 == "readMutipleLicks":
+elif cmd_line_arg_01 == "readMutipleLicks":
 
     filePath = input("\nEnter File-Path: ") 
     fileName = input("Enter File name: ")
