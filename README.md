@@ -15,7 +15,7 @@ git clone git@github.com:oliverkoell/lick_corea.git
 ## Usage - writeLick
 To generate a lick from a `.rb` and `.lc` files:
 ```sh
-python lickcorea.py writeLick
+python lickCorea.py writeLick
 Enter Harmony-File name: example.rb
 Enter Melody-File name: example.lc
 Enter MIDI-File name: example.mid
@@ -25,7 +25,7 @@ This will create a corresponding MIDI file with the generated lick.
 ## Usage - readLick
 To read an existing midi lick into the shredMode database:
 ```sh
-python lickcorea.py readLick
+python lickCorea.py readLick
 Enter Harmony-File name: example.rb
 Enter MIDI-File name: example.mid
 Enter MIDI-File tag: example_tag
