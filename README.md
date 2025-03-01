@@ -52,7 +52,6 @@ Feel free to contribute by submitting pull requests or reporting issues. Contrib
 This project is licensed under the MIT License.
 
 ## Author
-Created by Michael Žutić, Oliver Köll. Reach out via [oliver.koell99@gmail.com] or GitHub issues.
-
+Created by Michael Žutić, Oliver Köll.
 Enjoy jamming with LickCorea! 🎷🎶
 
