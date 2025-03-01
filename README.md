@@ -10,7 +10,7 @@ LickCorea is a domain-specific programming language designed for generating jazz
 ## Installation
 ```sh
 # Clone the repository
-git clone git@github.com:oliverkoell/lick_corea.git
+git clone git@github.com:oliverkoell/lick_corea.git](https://github.com/oliverkoell/lick_corea.git
 ```
 ## Usage - writeLick
 To generate a lick from a `.rb` and `.lc` files:
